@@ -28,8 +28,5 @@ public class AskJava {
         int competitorVotes = 43;
         System.out.println("Me: Hi Java, will I win the election?");
         System.out.println("Java: " + (yourVotes > competitorVotes) + "\n");
-                                        //comparison here
-
-
     }
 }
