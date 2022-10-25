@@ -1,9 +1,16 @@
 public class WorkSchedule {
     public static void main(String[] args) {
-        int day = 3;   //3rd day of the week...
-        boolean holiday = true;
+        int day = 6;   //3rd day of the week...
+        boolean holiday = false;
          
         // if it's a holiday, print: "woohoo, no work!");
+        if (holiday){
+            System.out.println("woohoo, no work!");
+        } else if (day == 6 || day == 7){
+            System.out.println("It's the weekend, no work!");
+        } else{
+            System.out.println("Wakt up at 7:00 :(");
+        }
         // if it's the weekend, print: "it's the weekend, no work!"
         // otherwise, print: "Wake up at 7:00 :( ";
         }
