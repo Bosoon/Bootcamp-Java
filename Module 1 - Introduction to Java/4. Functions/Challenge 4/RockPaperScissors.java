@@ -10,7 +10,7 @@ public class RockPaperScissors {
         System.out.println("Are you ready? Write 'yes' if you are.");
 
     //Task 1: See if the user wants to play. 
-        String choice = scan.nextLine();
+        String ready = scan.nextLine();
     /*Task 2: Set up the game
     
 
@@ -25,13 +25,13 @@ public class RockPaperScissors {
        • else:
              – print: Darn, some other time...!        
     */
-        if (choice.equals("yes")){
+        if (ready.equals("yes")){
             System.out.println("Great!");
             System.out.println("rock - paper - scissor, shoot!");
-            String choice2 = scan.nextLine();
+            String choice = scan.nextLine();
             String computer = computerChoice();
-            String result = result(choice2, computer);
-            printResult(choice2, computer, result);
+            String result = result(choice, computer);
+            printResult(choice, computer, result);
         } else {
             System.out.println("Darn, some other time...!");
         }
