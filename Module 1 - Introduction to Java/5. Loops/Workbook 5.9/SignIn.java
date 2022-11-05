@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class SignIn {
     public static void main(String[] args) {
         String username = "Samantha";
-        String password = "Java <3";
+        String password = "Java<3";
         
         /* Task 1 
             1. Pick up a username and password from the user.
@@ -12,8 +12,10 @@ public class SignIn {
         System.out.println("\nWelcome to Javagram! Sign in below\n");
         System.out.print("• Username: ");
         //pick up username
+        String inputName = scan.next();
         System.out.print("• Password: ");
         //pick up password
+        String inputPassword = scan.next();
 
         /* Task 2 
             1. Set up a loop that keeps running while the username OR password is incorrect. 
@@ -23,6 +25,15 @@ public class SignIn {
             2. After they enter the correct information, print: 
                    \nSign in successful. Welcome!
        */
+        while(!(username.equals(inputName) && password.equals(inputPassword))){
+            System.out.println("\nIncorrect, please try again!\n");
+            System.out.print("Username : ");
+            inputName = scan.next();
+            System.out.print("Password: ");
+            inputPassword = scan.next();
+        }
+
+        System.out.println("\nSing in successful. Welcome!");
 
         scan.close();
 
