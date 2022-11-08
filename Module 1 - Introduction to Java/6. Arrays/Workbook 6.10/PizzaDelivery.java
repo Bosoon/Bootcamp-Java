@@ -7,14 +7,30 @@ public class PizzaDelivery {
          *   1. Ask the user: How many pizza toppings do you want?. 
          *   2. Then, pick up the result using Scanner.
          */
+        System.out.print("How many pizza toppings do you want? ");
+        int result = scan.nextInt();
+
+        scan.nextLine();
 
         // Task 2 – Create the array here
+        String[] toppings = new String[result];
+        System.out.println("Great, enter each topping!");
 
+        for(int i = 0 ; i < result ; i++){
+            System.out.print(i + ". ");
+            toppings[i] = scan.nextLine();
+        }
         /** Task 3
          *  print Great, enter each topping!
          *  Create a for loop that runs through the length of the array.   
          * 
          */
+        System.out.println("Thank you! Here are the toppings you ordered");
+        for(int i = 0 ; i < result ; i++){
+            System.out.println(i + ". " + toppings[i]);
+        }
+
+        System.out.println("Please confirm the order.");
 
         /** Task 4 – Pick up the user's toppings and store them in the array.
          *  

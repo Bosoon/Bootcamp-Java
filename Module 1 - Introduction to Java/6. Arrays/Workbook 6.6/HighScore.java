@@ -9,11 +9,15 @@ public class HighScore {
         }
     
         int highScore = 0;
+        int index = 0;
         for (int i = 0; i < scores.length; i++) {
             if (scores[i] > highScore) {
                 highScore = scores[i];
+                index = i;
             }
         }
+        System.out.println("\nthe highest scores is: " + highScore + ". Impressive!");
+        System.out.println("It's the gentleman in sea: " + index +". Give that man a cookie!");
         /** Task 1 – Find the person with the highest score
          *  
          *   • After obtaining the highest score, print: The highest score is:  <highScore>. Impressive!

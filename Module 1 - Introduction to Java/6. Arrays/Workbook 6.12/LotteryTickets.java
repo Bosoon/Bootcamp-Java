@@ -2,14 +2,17 @@ import java.util.Arrays;
 
 public class LotteryTickets {
     public static void main(String[] args) {
-        int[] ticket = {34, 43, 45, 65, 21, 54};
+        int[] tickets = {34, 43, 45, 65, 21, 54};
         //Task 1 - Copy the elements of ticket into ticket2, but change the third value to 54. 
+        int[] tickets2 = Arrays.copyOf(tickets, tickets.length);
+        tickets2[2] = 54;
 
         System.out.print("Ticket 1 numbers: ");
         //Task 3 - Call printTicketNumbers for int[] ticket.   
-
+        printTemperatures(tickets);
         System.out.print("Ticket 2 numbers: ");
-        //Task 3 - Call printTicketNumbers for int[] ticket2.   
+        //Task 3 - Call printTicketNumbers for int[] ticket2.
+        printTemperatures(tickets2);
     }
     
     /** Task 2
@@ -21,6 +24,12 @@ public class LotteryTickets {
      *        i.e  1 4 6 3 2 6 
      *   2.   print a new line   
      */
+    public static void printTemperatures(int[] temps){
+        for(int ticket:temps){
+            System.out.print(ticket + " ");
+        }
+        System.out.println();
+    }
     
 }
 

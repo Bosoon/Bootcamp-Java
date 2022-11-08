@@ -25,14 +25,12 @@ public class Pokerito {
 
         System.out.println("Now, the dealer will draw five cards. Press enter to continue.");
 
-        String[] cards = new String[5];
+        String card = "";
         for(int i=0; i < 5; i++){
-            cards[i] = randomCard();
+            card = randomCard();
             System.out.println("Card " + (i + 1));
-            System.out.println("\n\n" + cards[i]);
-        }
-
-        for(String card: cards){
+            System.out.println("\n\n" + card);
+            scan.nextLine();
             if(card.equals(playerCard)){
                 yourMatches++;
             }
@@ -40,6 +38,7 @@ public class Pokerito {
                 computerMatches++;
             }
         }
+
         System.out.println("Your number of matches: " + yourMatches);
         System.out.println("Computer number of matches: " + computerMatches);
 
