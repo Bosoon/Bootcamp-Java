@@ -39,9 +39,9 @@ public class TDarrays {
         System.out.println("Using loop");
         String[] names = {"Harry", "Ron", "Hermione"};
 
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < grades.length; i++){
             System.out.print("\t" + names[i] + ": ");
-            for(int j=0; j < 4 ; j++){
+            for(int j=0; j < grades[i].length ; j++){
                 System.out.print(grades[i][j]+ " ");
             }
             System.out.println();
@@ -50,5 +50,9 @@ public class TDarrays {
         String[][] tables = new String[3][3];
         System.out.println(tables[0]);
         System.out.println(Arrays.toString(tables[0]));
+
+        int[][] tables2 = new int[3][3];
+        System.out.println(tables2[0]);
+        System.out.println(Arrays.toString(tables2[0]));
         }
 }
