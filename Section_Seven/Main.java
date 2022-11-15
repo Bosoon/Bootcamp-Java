@@ -1,19 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Car nissan = new Car();
-        Car dodge = new Car();
-
-        nissan.print();
-
-        nissan.maker = "Nissan";
-        nissan.year = 2020;
-        nissan.price = 5000;
-        nissan.color = "red";
-
-        dodge.maker = "Dodge";
-        dodge.price = 11000;
-        dodge.year = 2019;
-        dodge.color = "blue";
+        Car nissan = new Car("Nissan", 2020, 5000, "red");
+        Car dodge = new Car("Dodge", 11000, 2019, "blue");
 
         nissan.print();
         dodge.print();
