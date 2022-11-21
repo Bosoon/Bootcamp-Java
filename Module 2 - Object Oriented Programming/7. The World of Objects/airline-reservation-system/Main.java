@@ -9,5 +9,12 @@ public class Main {
       
         bo.print();
     
+        Person person = new Person("Rayan Slim", "Canadian", "01/01/1111", 5);
+        Person twin = new Person(person);
+        twin.setSeatNumber(3);
+        twin.setName("Jad Slim");
+
+        person.print();
+        twin.print();
     }
 }
