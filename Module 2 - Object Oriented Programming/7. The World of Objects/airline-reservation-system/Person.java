@@ -62,6 +62,23 @@ public class Person {
         return this.passport;
     }
 
+    public boolean applyPassport(){
+        int number = (int)(Math.random() * 2);
+        switch(number) {
+            case 1:
+                return true;
+            case 0:
+                return false;
+            default:
+                System.out.println("No in here");
+                return false;
+        }
+    }
+
+    public void chooseSeat(){
+        this.seatNumber = (int)(Math.random() * 11 ) + 1;
+    }
+
     public void print(){
         System.out.println("Name: " + this.getName());
         System.out.println("Nationality: " + this.getNationality());

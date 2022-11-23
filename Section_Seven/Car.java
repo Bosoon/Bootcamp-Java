@@ -4,12 +4,14 @@ public class Car {
     private double price;
     private int year;
     private String color;
+    private String[] parts;
 
-    public Car(String maker, double price, int year, String color) {
+    public Car(String maker, double price, int year, String color, String[] parts) {
         this.maker = maker;
         this.price = price;
         this.year = year;
         this.color = color;
+        this.parts = parts;
     }
 
     public String getMaker(){

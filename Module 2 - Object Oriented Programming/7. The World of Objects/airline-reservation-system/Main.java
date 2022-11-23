@@ -9,12 +9,19 @@ public class Main {
       
         bo.print();
     
-        Person person = new Person("Rayan Slim", "Canadian", "01/01/1111", 5);
-        Person twin = new Person(person);
-        twin.setSeatNumber(3);
-        twin.setName("Jad Slim");
+        Person person = new Person("Rayan Slim", "Canadian", "01/01/1111");
 
+        person.chooseSeat();
         person.print();
-        twin.print();
+        person.applyPassport();
+        if (person.applyPassport()){
+            System.out.println("Congratulations " + person.getName() + ". Your passport was approved!");
+        } else {
+            System.out.println("We are sorry " + person.getName() + ". We cannot process your application.");
+        }
+
+
+
+        
     }
 }
