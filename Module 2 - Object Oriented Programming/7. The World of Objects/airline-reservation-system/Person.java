@@ -1,15 +1,18 @@
+import java.util.Arrays;
+
 public class Person {
     private String name;
     private String nationality;
     private String dateOfBirth;
     private int seatNumber;
     
-    private String[] passport = {this.name, this.nationality, this.dateOfBirth};
+    private String[] passport;
 
     public Person(String name, String nationality, String dateOfBirth){
         this.name = name;
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
+        this.passport = new String[3];
     }
 
     public Person(String name, String nationality, String dateOfBirth, int seatNumber){
@@ -17,6 +20,7 @@ public class Person {
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
         this.seatNumber = seatNumber;
+        this.passport = new String[3];
     }
 
     public Person(Person source){
@@ -24,6 +28,7 @@ public class Person {
         this.nationality = source.nationality;
         this.dateOfBirth = source.dateOfBirth;
         this.seatNumber = source.seatNumber;
+        this.passport = Arrays.copyOf(source.passport, source.passport.length);
     }
     
     public void setName(String name){
@@ -59,7 +64,11 @@ public class Person {
     }
 
     public String[] getPassport(){
-        return this.passport;
+        return Arrays.copyOf(this.passport, this.passport.length);
+    }
+
+    public void setPassport(){
+        this.passport = Arrays.copyOf(new String[]{this.getName(), this.getNationality(), this.getDateOfBirth()}, 3);
     }
 
     public boolean applyPassport(){
@@ -84,5 +93,14 @@ public class Person {
         System.out.println("Nationality: " + this.getNationality());
         System.out.println("Date of Birth: " + this.getDateOfBirth());
         System.out.println("Seat Number: " + this.getSeatNumber());
+        System.out.println("Passport : " + Arrays.toString(this.getPassport()));
+    }
+
+    public String toString(){
+        return "Name: " + this.getName() + "\n" + "Nationality: " + 
+        this.getNationality() + "\n" + "Date of Birth: " + 
+        this.getDateOfBirth() + "\n" + "Seat Number: " +
+        this.getSeatNumber() + "\n" + "Passport: " + 
+        Arrays.toString(Arrays.copyOf(this.getPassport(), 3)) + "\n";
     }
 }
